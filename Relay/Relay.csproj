@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="APIRequest.cs" />
+    <Compile Remove="APIRequestTranslator.cs" />
+    <Compile Remove="Program.cs" />
+    <Compile Remove="new-code\APIClient.cs" />
+    <Compile Remove="new-code\APIRequest.cs" />
+    <Compile Remove="new-code\APIRequestTranslator.cs" />
+    <Compile Remove="new-code\RelayService.cs" />
+  </ItemGroup>
+</Project>
