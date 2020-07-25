@@ -11,8 +11,6 @@ namespace ApiRelay
 {
     public class APIClient : IDisposable
     {
-        private static List<string> skipHeader = new List<string> { "accept", "accept-encoding", "host", "connection", "content-length", "content-type", "host", "origin", "referer", "user-agent", "cookie", "cache-control", "x-postman-interceptor-id", "postman-token", "dnt", "ms-aspnetcore-token", "x-original-proto", "x-original-for", "query-path" };
-
         private HttpClient _httpClient { get; set; }
 
         private string _url { get; set; }
@@ -65,7 +63,6 @@ namespace ApiRelay
         public void AddHeaders(List<Header> headers)
         {
             headers
-                .FindAll(x => !skipHeader.Contains(x.Key.ToLower()))
                 .ForEach(AddHeader);
         }
 
